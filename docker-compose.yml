@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  nft-dapp:
+    build: .
+    ports:
+      - "3030:3030"
+    volumes:
+      - ./static:/app/static
+      - ./data:/app/data
+    environment:
+      - RUST_LOG=info
+      - DATABASE_URL=sqlite:/app/data/nft_dapp.db
+
+volumes:
+  data:
