@@ -1,7 +1,0 @@
-[build]
-  # Deixar o Railway detectar automaticamente o Dockerfile
-
-[deploy]
-  startCommand = "./nft-passkey-dapp"
-  healthcheckPath = "/"
-  healthcheckTimeout = 300
