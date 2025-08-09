@@ -1,7 +1,8 @@
 [build]
-builder = "DOCKER"
+  # Usar o builder padrão do Railway que detecta automaticamente o Dockerfile
+  # Ou especificar explicitamente o builder como "nixpacks" para projetos Rust
 
 [deploy]
-startCommand = "docker-compose up -d"
-healthcheckPath = "/"
-healthcheckTimeout = 300
+  startCommand = "docker-compose up -d"
+  healthcheckPath = "/"
+  healthcheckTimeout = 300
