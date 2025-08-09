@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT PassKey DApp</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>NFT PassKey DApp</h1>
+        <nav>
+            <button id="login-btn">Login com PassKey</button>
+            <button id="logout-btn" style="display: none;">Logout</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="blockchain-selector">
+            <h2>Selecione a Blockchain</h2>
+            <select id="blockchain-select">
+                <option value="">Carregando blockchains...</option>
+            </select>
+        </section>
+        
+        <section id="nft-creator">
+            <h2>Criar NFT</h2>
+            <form id="nft-form">
+                <div>
+                    <label for="nft-name">Nome:</label>
+                    <input type="text" id="nft-name" required>
+                </div>
+                
+                <div>
+                    <label for="nft-description">Descrição:</label>
+                    <textarea id="nft-description" required></textarea>
+                </div>
+                
+                <div>
+                    <label for="nft-image">URL da Imagem:</label>
+                    <input type="url" id="nft-image" required>
+                </div>
+                
+                <button type="submit">Criar NFT</button>
+            </form>
+        </section>
+        
+        <section id="nft-display" style="display: none;">
+            <h2>Seu NFT</h2>
+            <div id="nft-content"></div>
+            <button id="mint-btn">Mintar NFT</button>
+        </section>
+    </main>
+    
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
