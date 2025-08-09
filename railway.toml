@@ -1,8 +1,7 @@
 [build]
-  # Usar o builder padrão do Railway que detecta automaticamente o Dockerfile
-  # Ou especificar explicitamente o builder como "nixpacks" para projetos Rust
+  # Deixar o Railway detectar automaticamente o Dockerfile
 
 [deploy]
-  startCommand = "docker-compose up -d"
+  startCommand = "./nft-passkey-dapp"
   healthcheckPath = "/"
   healthcheckTimeout = 300
