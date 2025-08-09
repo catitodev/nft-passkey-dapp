@@ -17,7 +17,12 @@ async fn main() {
     );
     
     // Configuração do servidor
-    let addr: SocketAddr = ([0, 0, 0, 0], 3030).into();
+    // Usar a porta definida pelo Railway ou 3030 como padrão
+    let port: u16 = std::env::var("PORT")
+        .unwrap_or_else(|_| "3030".to_string())
+        .parse()
+        .expect("PORT must be a number");
+    let addr: SocketAddr = ([0, 0, 0, 0], port).into();
     
     // Rota básica para servir arquivos estáticos
     let static_files = warp::path("static")
