@@ -5,5 +5,8 @@
   "deploy": {
     "startCommand": "cargo run",
     "restartPolicyType": "always"
+  },
+  "env": {
+    "PORT": "3030"
   }
 }
